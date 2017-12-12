@@ -16,7 +16,7 @@ optimizer = tf.train.GradientDescentOptimizer(0.5)
 train = optimizer.minimize(loss)
 # create tensorflow structure end #
 with tf.Session() as sess:
-    init = tf.global_variables_initializer().run()
+    tf.global_variables_initializer().run()
     for step in range(401):
         sess.run(train)
         if step % 20 == 0:
